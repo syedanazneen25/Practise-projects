@@ -4,6 +4,7 @@ let audioElement = new Audio('songs/1.mp3');
 let masterplay = document.getElementById('masterplay');
 let myprogerssbar = document.getElementById('myprogressbar');
 let gif = document.getElementById('gif');
+let mastersongname = document.getElementById('mastersongname');
 let songItem = Array.from(document.getElementsByClassName('songItem'));
 let songs = [
     {songName: "Hona Tha Pyar", filepath: "songs/1.mp3", coverPath: "covers/cover1.jpg"},
@@ -56,8 +57,10 @@ Array.from(document.getElementsByClassName('songItemplay')).forEach((element)=>{
         e.target.classList.remove('fa-play-circle');
         e.target.classList.add('fa-pause-circle');
         audioElement.src = `songs/${songindex}.mp3`;
+        mastersongname.innerText = songs[songindex-1].songName;
         audioElement.currentTime = 0;
         audioElement.play();
+        gif.style.opacity = 1; 
         masterplay.classList.remove('fa-play-circle');
         masterplay.classList.add('fa-pause-circle');
     })
@@ -71,6 +74,7 @@ document.getElementById('next').addEventListener('click', ()=>{
         songindex += 1;
     }
     audioElement.src = `songs/${songindex}.mp3`;
+    mastersongname.innerText = songs[songindex-1].songName;
     audioElement.currentTime = 0;
     audioElement.play();
     masterplay.classList.remove('fa-play-circle');
@@ -85,6 +89,7 @@ document.getElementById('previous').addEventListener('click', ()=>{
         songindex -= 1;
     }
     audioElement.src = `songs/${songindex}.mp3`;
+    mastersongname.innerText = songs[songindex-1].songName;
     audioElement.currentTime = 0;
     audioElement.play();
     masterplay.classList.remove('fa-play-circle');
