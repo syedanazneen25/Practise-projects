@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify-Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img lt="Spotify"> My Music App </li>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="songlist">
+            <h1>My Favorites</h1>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songname">Hona Tha Pyar</span>
+                    <span class="songlistplay"><span class="timestamp">03:42 <i id="1" class="far songItemplay fa-play-circle"></i>  </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songname">Hona Tha Pyar</span>
+                    <span class="songlistplay"><span class="timestamp">03:42 <i id="2" class="far songItemplay fa-play-circle"></i>  </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songname">Hona Tha Pyar</span>
+                    <span class="songlistplay"><span class="timestamp">03:42 <i id="3" class="far songItemplay fa-play-circle"></i>  </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songname">Hona Tha Pyar</span>
+                    <span class="songlistplay"><span class="timestamp">03:42 <i id="4" class="far songItemplay fa-play-circle"></i>  </span></span>
+                </div> <div class="songItem">
+                    <img alt="1">
+                    <span class="songname">Hona Tha Pyar</span>
+                    <span class="songlistplay"><span class="timestamp">03:42 <i id="5" class="far songItemplay fa-play-circle"></i>  </span></span>
+                </div>
+            </div>
+        </div>
+        <div class="songbanner"></div>
+    </div>
+
+    <div class="bottom">
+        <input type="range" name="range" id="myprogressbar" min="0" value="0" max="100">
+        <div class="icons">
+            <!-- fontawesome icons -->
+            <i class="fa-solid fa-backward" id="previous"></i>
+            <i class="fa-play-circle" id="masterplay"></i>
+            <i class="fa-solid fa-forward" id="next"></i>
+        </div>
+        <div class="songinfo">
+            <img width="50px" alt="" id="gif"> Hona Tha Pyar - Atif Aslam
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/bfa336c58d.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
